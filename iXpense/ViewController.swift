@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseUI
+import GoogleSignIn
 
-class ViewController: UIViewController {
+class CategoryListViewController: UIViewController {
+    
+    var authUI: FUIAuth!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

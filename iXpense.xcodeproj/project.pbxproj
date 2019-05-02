@@ -7,21 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39B46A5582CB7DEDD5B04A93 /* Pods_iXpense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC4707A3401F7E0A64C9D6F /* Pods_iXpense.framework */; };
+		DE0487142276C5AA0046F157 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0487132276C5AA0046F157 /* TransactionTableViewCell.swift */; };
+		DE0487162276C60E0046F157 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0487152276C60E0046F157 /* TransactionListViewController.swift */; };
+		DE0487182276C64B0046F157 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0487172276C64B0046F157 /* TransactionDetailViewController.swift */; };
+		DE04871A2276C6990046F157 /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0487192276C6990046F157 /* CategoryDetailViewController.swift */; };
+		DE04871C2276C7310046F157 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04871B2276C7310046F157 /* Categories.swift */; };
+		DE04871E2276C7400046F157 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04871D2276C7400046F157 /* Category.swift */; };
+		DE0487202276C7510046F157 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04871F2276C7510046F157 /* Transaction.swift */; };
+		DE0487222276D3040046F157 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0487212276D3040046F157 /* Transactions.swift */; };
+		DE0487242276DB190046F157 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE0487232276DB190046F157 /* GoogleService-Info.plist */; };
+		DE04872622776A440046F157 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04872522776A440046F157 /* AddCategoryViewController.swift */; };
 		DE7DB150226FE36D0019CD6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7DB14F226FE36D0019CD6B /* AppDelegate.swift */; };
-		DE7DB152226FE36D0019CD6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7DB151226FE36D0019CD6B /* ViewController.swift */; };
+		DE7DB152226FE36D0019CD6B /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7DB151226FE36D0019CD6B /* CategoryListViewController.swift */; };
 		DE7DB155226FE36D0019CD6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7DB153226FE36D0019CD6B /* Main.storyboard */; };
 		DE7DB157226FE36E0019CD6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7DB156226FE36E0019CD6B /* Assets.xcassets */; };
 		DE7DB15A226FE36E0019CD6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7DB158226FE36E0019CD6B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1278274D8B9ED2C01706096C /* Pods-iXpense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iXpense.release.xcconfig"; path = "Target Support Files/Pods-iXpense/Pods-iXpense.release.xcconfig"; sourceTree = "<group>"; };
+		8C0158B35DDDD4455B7BDD93 /* Pods-iXpense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iXpense.debug.xcconfig"; path = "Target Support Files/Pods-iXpense/Pods-iXpense.debug.xcconfig"; sourceTree = "<group>"; };
+		DE0487132276C5AA0046F157 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		DE0487152276C60E0046F157 /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
+		DE0487172276C64B0046F157 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
+		DE0487192276C6990046F157 /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
+		DE04871B2276C7310046F157 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		DE04871D2276C7400046F157 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		DE04871F2276C7510046F157 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		DE0487212276D3040046F157 /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
+		DE0487232276DB190046F157 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DE04872522776A440046F157 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		DE7DB14C226FE36D0019CD6B /* iXpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iXpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7DB14F226FE36D0019CD6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE7DB151226FE36D0019CD6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE7DB151226FE36D0019CD6B /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		DE7DB154226FE36D0019CD6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE7DB156226FE36E0019CD6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE7DB159226FE36E0019CD6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE7DB15B226FE36E0019CD6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDC4707A3401F7E0A64C9D6F /* Pods_iXpense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iXpense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39B46A5582CB7DEDD5B04A93 /* Pods_iXpense.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28D06F205322255661F1D851 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C0158B35DDDD4455B7BDD93 /* Pods-iXpense.debug.xcconfig */,
+				1278274D8B9ED2C01706096C /* Pods-iXpense.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		54CA56D9D4A734EA457CFDAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDC4707A3401F7E0A64C9D6F /* Pods_iXpense.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DE7DB143226FE36D0019CD6B = {
 			isa = PBXGroup;
 			children = (
 				DE7DB14E226FE36D0019CD6B /* iXpense */,
 				DE7DB14D226FE36D0019CD6B /* Products */,
+				28D06F205322255661F1D851 /* Pods */,
+				54CA56D9D4A734EA457CFDAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +99,21 @@
 			isa = PBXGroup;
 			children = (
 				DE7DB14F226FE36D0019CD6B /* AppDelegate.swift */,
-				DE7DB151226FE36D0019CD6B /* ViewController.swift */,
+				DE04871B2276C7310046F157 /* Categories.swift */,
+				DE04871D2276C7400046F157 /* Category.swift */,
+				DE0487212276D3040046F157 /* Transactions.swift */,
+				DE04871F2276C7510046F157 /* Transaction.swift */,
+				DE7DB151226FE36D0019CD6B /* CategoryListViewController.swift */,
+				DE0487192276C6990046F157 /* CategoryDetailViewController.swift */,
+				DE04872522776A440046F157 /* AddCategoryViewController.swift */,
+				DE0487152276C60E0046F157 /* TransactionListViewController.swift */,
+				DE0487132276C5AA0046F157 /* TransactionTableViewCell.swift */,
+				DE0487172276C64B0046F157 /* TransactionDetailViewController.swift */,
 				DE7DB153226FE36D0019CD6B /* Main.storyboard */,
 				DE7DB156226FE36E0019CD6B /* Assets.xcassets */,
 				DE7DB158226FE36E0019CD6B /* LaunchScreen.storyboard */,
 				DE7DB15B226FE36E0019CD6B /* Info.plist */,
+				DE0487232276DB190046F157 /* GoogleService-Info.plist */,
 			);
 			path = iXpense;
 			sourceTree = "<group>";
@@ -71,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE7DB15E226FE36E0019CD6B /* Build configuration list for PBXNativeTarget "iXpense" */;
 			buildPhases = (
+				A023FDB9E4A41C9FE6C3E0D7 /* [CP] Check Pods Manifest.lock */,
 				DE7DB148226FE36D0019CD6B /* Sources */,
 				DE7DB149226FE36D0019CD6B /* Frameworks */,
 				DE7DB14A226FE36D0019CD6B /* Resources */,
+				6E3B3086E9C292159E9F6447 /* [CP] Embed Pods Frameworks */,
+				7E34C9D6EFFE133007119BB1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE7DB15A226FE36E0019CD6B /* LaunchScreen.storyboard in Resources */,
+				DE0487242276DB190046F157 /* GoogleService-Info.plist in Resources */,
 				DE7DB157226FE36E0019CD6B /* Assets.xcassets in Resources */,
 				DE7DB155226FE36D0019CD6B /* Main.storyboard in Resources */,
 			);
@@ -130,13 +188,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E3B3086E9C292159E9F6447 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iXpense/Pods-iXpense-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iXpense/Pods-iXpense-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E34C9D6EFFE133007119BB1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iXpense/Pods-iXpense-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iXpense/Pods-iXpense-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A023FDB9E4A41C9FE6C3E0D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iXpense-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DE7DB148226FE36D0019CD6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE7DB152226FE36D0019CD6B /* ViewController.swift in Sources */,
+				DE0487222276D3040046F157 /* Transactions.swift in Sources */,
+				DE7DB152226FE36D0019CD6B /* CategoryListViewController.swift in Sources */,
+				DE04871C2276C7310046F157 /* Categories.swift in Sources */,
+				DE0487182276C64B0046F157 /* TransactionDetailViewController.swift in Sources */,
 				DE7DB150226FE36D0019CD6B /* AppDelegate.swift in Sources */,
+				DE04871A2276C6990046F157 /* CategoryDetailViewController.swift in Sources */,
+				DE0487142276C5AA0046F157 /* TransactionTableViewCell.swift in Sources */,
+				DE0487162276C60E0046F157 /* TransactionListViewController.swift in Sources */,
+				DE04871E2276C7400046F157 /* Category.swift in Sources */,
+				DE0487202276C7510046F157 /* Transaction.swift in Sources */,
+				DE04872622776A440046F157 /* AddCategoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +438,7 @@
 		};
 		DE7DB15F226FE36E0019CD6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C0158B35DDDD4455B7BDD93 /* Pods-iXpense.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +457,7 @@
 		};
 		DE7DB160226FE36E0019CD6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1278274D8B9ED2C01706096C /* Pods-iXpense.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
