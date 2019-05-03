@@ -35,13 +35,11 @@ class CategoryListViewController: UIViewController {
         tableView.isHidden = true
         totalSpendingLabel.isHidden = true
         
-        var totalspending = 0.0
-        for category in categories.categoryArray {
-            totalspending += category.total
-        }
-        
-        totalSpendingLabel.text = "Your Total Spending: $\(totalspending)"
-        
+//        var totalspending = 0.0
+//        for category in categories.categoryArray {
+//            totalspending += category.total
+//        }
+//        totalSpendingLabel.text = "Your Total Spending: $\(totalspending)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +48,7 @@ class CategoryListViewController: UIViewController {
 //            print("Transactions loaded")
 //            print(self.transactions.transactionArray[0].amount)
             self.categories.loadData {
+                var totalspending = 0.0
                 for category in self.categories.categoryArray {
                     var categoryTotal = 0.0
                     for transaction in self.transactions.transactionArray {
@@ -61,9 +60,11 @@ class CategoryListViewController: UIViewController {
                         }
                     }
                     category.total = categoryTotal
+                    totalspending += category.total
                 }
                 self.tableView.reloadData()
                 print(self.categories.categoryArray[0].total)
+                self.totalSpendingLabel.text = "Your Total Spending: $\(totalspending)"
             }
         }
     }

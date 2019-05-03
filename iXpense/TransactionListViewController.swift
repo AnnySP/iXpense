@@ -10,7 +10,9 @@ import UIKit
 
 class TransactionListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var editButton: UIBarButtonItem!
+    @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var CategoryLabel: UILabel!
     
     var category: Category!
@@ -32,14 +34,6 @@ class TransactionListViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        categories.loadData {
-//            self.tableView.reloadData()
-//        }
-//        transactions.loadData {
-//            self.tableView.reloadData()
-//        }
-
-//        prepareTrans(categoryName: categoryName)
         transactions.loadData {
             self.newArray = []
             for transaction in self.transactions.transactionArray {
@@ -47,22 +41,26 @@ class TransactionListViewController: UIViewController {
                     self.newArray.append(transaction)
                 }
             }
-            print("😆 \(self.newArray[0].category)")
             self.transactionPerCate = self.newArray
             self.tableView.reloadData()
         }
     }
     
-//    @IBAction func unwindFromSegue(segue: UIStoryboardSegue) {
-//        if segue.identifier == "unwind" {
-//            let source = segue.source as! TransactionDetailViewController
-//            self.categories = source.categories
-//            print("Called")
-//            self.navigationController?.setViewControllers([CategoryListViewController()], animated: true)
-//        }
-//    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            transactions.transactionArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     
-
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        // First make a copy of the item that you are going to move
+        let itemToMove = transactions.transactionArray[sourceIndexPath.row]
+        // Delete item from the original location (pre-move)
+        transactions.transactionArray.remove(at: sourceIndexPath.row)
+        // Insert item into the "to", post-move, location
+        transactions.transactionArray.insert(itemToMove, at: destinationIndexPath.row)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowTransactionDetail" {
@@ -96,11 +94,21 @@ class TransactionListViewController: UIViewController {
     }
     
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
+        if tableView.isEditing {
+            tableView.setEditing(false, animated: true)
+            editButton.title = "Edit"
+            addButton.isEnabled = true
+            cancelButton.isEnabled = true
+        } else {
+            tableView.setEditing(true, animated: true)
+            editButton.title = "Done"
+            addButton.isEnabled = false
+            cancelButton.isEnabled = false
+        }
     }
     
     @IBAction func addTransactionButtonPressed(_ sender: UIBarButtonItem) {
     }
-    
     
 }
 
