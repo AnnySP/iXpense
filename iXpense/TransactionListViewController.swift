@@ -11,6 +11,7 @@ import UIKit
 class TransactionListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
+    @IBOutlet weak var CategoryLabel: UILabel!
     
     var category: Category!
     var categories = Categories()
@@ -27,6 +28,7 @@ class TransactionListViewController: UIViewController {
        
         tableView.delegate = self
         tableView.dataSource = self
+        CategoryLabel.text = "Your transactions for \(categoryName ?? "Unkown Category")"
     }
     
     override func viewWillAppear(_ animated: Bool) {

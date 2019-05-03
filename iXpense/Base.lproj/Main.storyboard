@@ -36,10 +36,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Spending:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14m-xT-D47">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Total Spending:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14m-xT-D47">
                                 <rect key="frame" x="16" y="71" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -135,9 +135,9 @@
                                 <color key="barTintColor" red="0.97647058819999999" green="0.43137254899999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Transactions for ... :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZQ-4R-tMa">
-                                <rect key="frame" x="0.0" y="64" width="375" height="34"/>
+                                <rect key="frame" x="16" y="64" width="343" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -158,6 +158,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="CategoryLabel" destination="1ZQ-4R-tMa" id="7as-DT-E0B"/>
                         <outlet property="editButton" destination="Sf4-rl-I5g" id="GaY-wc-OD4"/>
                         <outlet property="tableView" destination="PV9-za-8Xz" id="TLe-qE-x3m"/>
                     </connections>
@@ -349,6 +350,9 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ZSP-Yv-1vJ">
                             <connections>
                                 <action selector="saveButtonPressed:" destination="daC-7L-f8H" id="8sh-wP-inf"/>
+                                <segue destination="BYZ-38-t0r" kind="popoverPresentation" identifier="BackToMain" popoverAnchorBarButtonItem="ZSP-Yv-1vJ" id="Xhs-gu-0Lu">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -469,5 +473,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="N2C-Wv-lPL"/>
         <segue reference="zeu-cf-z5x"/>
+        <segue reference="erL-bl-a4b"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -34,7 +34,13 @@ class CategoryListViewController: UIViewController {
         tableView.dataSource = self
         tableView.isHidden = true
         totalSpendingLabel.isHidden = true
-//        pieChartView.isHidden = true
+        
+        var totalspending = 0.0
+        for category in categories.categoryArray {
+            totalspending += category.total
+        }
+        
+        totalSpendingLabel.text = "Your Total Spending: $\(totalspending)"
         
     }
     
@@ -60,10 +66,7 @@ class CategoryListViewController: UIViewController {
                 print(self.categories.categoryArray[0].total)
             }
         }
-        
-       
-
-        }
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -163,7 +166,7 @@ extension CategoryListViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = " \(categories.categoryArray[indexPath.row].name): \(categories.categoryArray[indexPath.row].total)"
+        cell.textLabel?.text = " \(categories.categoryArray[indexPath.row].name):  $\(categories.categoryArray[indexPath.row].total)"
         return cell
     }
 }
