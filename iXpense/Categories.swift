@@ -36,31 +36,28 @@ class Categories {
         }
     }
     
-    func updateTotal(completed: @escaping ()-> ()) {
-//        let db = Firestore.firestore()
-    
-        for index in 0..<categoryArray.count {
-            var categoryTotal = 0.0
-            for transaction in transactions.transactionArray {
-                print(transactions.transactionArray)
-                if transactions.transactionArray[index].category == categoryArray[index].name {
-                    categoryTotal = categoryTotal + transaction.amount
-                    print(transaction.amount)
-                }
-            }
-            print(categoryTotal)
-            self.categoryArray[index].total = categoryTotal
-            self.categoryArray[index].saveData { (success) in
-                if success {
-                    print("Success")
-                } else {
-                    print("Failure")
-                }
-            }
-        }
-        completed()
-        
-        
-    }
-
+//    func updateTotal(completed: @escaping ()-> ()) {
+////        let db = Firestore.firestore()
+//
+//        for index in 0..<categoryArray.count {
+//            var categoryTotal = 0.0
+//            for transaction in transactions.transactionArray {
+//                print(transactions.transactionArray)
+//                if transactions.transactionArray[index].category == categoryArray[index].name {
+//                    categoryTotal = categoryTotal + transaction.amount
+//                    print(transaction.amount)
+//                }
+//            }
+//            print(categoryTotal)
+//            self.categoryArray[index].total = categoryTotal
+//            self.categoryArray[index].saveData { (success) in
+//                if success {
+//                    print("Success")
+//                } else {
+//                    print("Failure")
+//                }
+//            }
+//        }
+//        completed()
+//    }
 }

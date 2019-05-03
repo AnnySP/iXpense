@@ -18,14 +18,15 @@ class TransactionListViewController: UIViewController {
     var categoryName: String!
 //    var transactionPerCate = [Transaction]()
     var transactionPerCate = [Transaction]()
+    var newArray = [Transaction]()
+    var existingTrans = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        transactions = Transactions()
        
         tableView.delegate = self
         tableView.dataSource = self
-        
-         tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,13 +38,16 @@ class TransactionListViewController: UIViewController {
 //        }
 
 //        prepareTrans(categoryName: categoryName)
-    }
-    
-    func prepareTrans(categoryName: String) {
-        for i in 0..<transactions.transactionArray.count {
-            if transactions.transactionArray[i].category == categoryName {
-                transactionPerCate.append(transactions.transactionArray[i])
+        transactions.loadData {
+            self.newArray = []
+            for transaction in self.transactions.transactionArray {
+                if transaction.category == self.category.name {
+                    self.newArray.append(transaction)
+                }
             }
+            print("😆 \(self.newArray[0].category)")
+            self.transactionPerCate = self.newArray
+            self.tableView.reloadData()
         }
     }
     
@@ -54,8 +58,6 @@ class TransactionListViewController: UIViewController {
 //            print("Called")
 //            self.navigationController?.setViewControllers([CategoryListViewController()], animated: true)
 //        }
-//
-//
 //    }
     
 
@@ -64,9 +66,18 @@ class TransactionListViewController: UIViewController {
         if segue.identifier == "ShowTransactionDetail" {
             let destination = segue.destination as! TransactionDetailViewController
             let selectedIndexPath = tableView.indexPathForSelectedRow!
-            destination.transaction = transactions.transactionArray[selectedIndexPath.row]
+            destination.transaction = transactionPerCate[selectedIndexPath.row]
+            destination.transactions = transactionPerCate
+            destination.category = category
+            destination.existingTrans = existingTrans
         } else {
-//            segue.destination as! TransactionDetailViewController
+            let destinationNC = segue.destination as! UINavigationController
+            let destination = destinationNC.topViewController as! TransactionDetailViewController
+//            let destination = segue.destination as! TransactionDetailViewController
+            destination.category = category
+            destination.transactions = transactionPerCate
+            existingTrans = false
+            destination.existingTrans = existingTrans
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 tableView.deselectRow(at: selectedIndexPath, animated: true)
             }

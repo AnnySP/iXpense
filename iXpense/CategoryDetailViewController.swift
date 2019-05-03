@@ -15,6 +15,7 @@ class CategoryDetailViewController: UIViewController {
     
     var categories: Categories!
     var transactions: Transactions!
+    var existingTrans = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,24 +25,19 @@ class CategoryDetailViewController: UIViewController {
 //            self.tableView.reloadData()
 //            print(self.categories.categoryArray[0].total)
 //        }
-
-        
         print(self.transactions.transactionArray[0].amount)
-        
-        
-        
-        
         tableView.delegate = self
         tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if !categories.categoryArray.isEmpty {
-             print(self.categories.categoryArray[0].total)
+        categories.loadData {
+            if !self.categories.categoryArray.isEmpty {
+                print(self.categories.categoryArray[0].total)
+            }
+            self.tableView.reloadData()
         }
-       
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,11 +49,9 @@ class CategoryDetailViewController: UIViewController {
             destination.categoryName = categories.categoryArray[selectedIndexPath.row].name
             destination.category = categories.categoryArray[selectedIndexPath.row]
             destination.categories = categories
-            destination.transactions = transactions
-
-//            destination.categoryTextField.text = categories.categoryArray[selectedIndexPath.row].name
+            destination.transactions = transactions.transactionArray
+            destination.existingTrans = existingTrans
         } else {
-//            segue.destination as! AddCategoryViewController
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 tableView.deselectRow(at: selectedIndexPath, animated: true)
             }
@@ -75,7 +69,7 @@ class CategoryDetailViewController: UIViewController {
     
     @IBAction func addCategoryButtonPressed(_ sender: UIBarButtonItem) {
         self.navigationController?.popToRootViewController(animated: true)
-            }
+    }
 }
 
 

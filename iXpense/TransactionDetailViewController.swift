@@ -15,14 +15,13 @@ class TransactionDetailViewController: UIViewController {
     var category: Category!
     var categories: Categories!
     var transaction: Transaction!
-    var transactions: Transactions!
+    var transactions: [Transaction]!
     var categoryName: String!
+    var existingTrans: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if transaction == nil {
-            transaction = Transaction()
-        }
+        
 //        transactions = Transactions()
 //        transactions.loadData {
 //            print(self.transactions.transactionArray[0].amount)
@@ -37,9 +36,14 @@ class TransactionDetailViewController: UIViewController {
     }
     
     func updateUserInterface() {
-        categoryTextField.text = categoryName
-        //descriptionTextField.text = transaction.description
-        //amountTextField.text = "\(transaction.amount)"
+        if transaction == nil {
+            transaction = Transaction()
+            categoryTextField.text = category.name
+        } else {
+            categoryTextField.text = transaction.category
+            descriptionTextField.text = transaction.description
+            amountTextField.text = "\(transaction.amount)"
+        }
     }
     
     func updateDataFromInterface() {
@@ -63,14 +67,18 @@ class TransactionDetailViewController: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         var categoryTotal = 0.0
-       print(transactions.transactionArray[0].amount)
-        for transaction in transactions.transactionArray {
+        for transaction in transactions {
+            print(transaction.category)
+            print(transaction.amount)
             if transaction.category == category.name {
-                categoryTotal += transaction.amount
-                category.total = categoryTotal
+            categoryTotal += transaction.amount
+             print("😃\(categoryTotal)")
             }
         }
-        print("😃\(categoryTotal)")
+        if !existingTrans {
+            categoryTotal += Double(amountTextField.text!)!
+        }
+        category.total = categoryTotal
         print(category.total)
         category.saveData { (success) in
             if success {
